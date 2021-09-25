@@ -27,13 +27,13 @@ class GitAdapter: PagedListAdapter<Item, GitAdapter.GitViewHolder>(ITEM_COMPARAT
     }
 
     class GitViewHolder(val binding: RepositoryItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        private val avatarImage = binding.ivAvatar
-        private val repoDescription = binding.tvRepoDesc
-        private val repoName = binding.tvRepoName
-        private val repoOwnerName = binding.tvRepoOwner
-        private val numberOfStars = binding.tvNumberOfStars
-        private val numberOfIssues = binding.tvNumberOfIssues
-        private val lang = binding.tvLang
+        private val avatarImage = binding.imgProfile
+        private val repoDescription = binding.txtDescription
+        private val repoName = binding.txtName
+        private val repoOwnerName = binding.txtOwner
+        private val numberOfStars = binding.txtStars
+        private val numberOfIssues = binding.txtFork
+        private val lang = binding.txtLanguage
 
         fun bind(data: Item) {
 

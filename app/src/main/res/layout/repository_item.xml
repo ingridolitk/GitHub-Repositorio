@@ -4,84 +4,84 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:layout_margin="20dp">
+    android:layout_height="@dimen/layout_height"
+    android:layout_margin="@dimen/layout_margin">
 
 
     <TextView
-        android:id="@+id/tvRepoName"
+        android:id="@+id/txtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:text="[Repo Name]"
+        android:layout_marginStart="@dimen/margin_repo"
+        android:layout_marginTop="@dimen/margin_repo"
+        android:text="@string/app_repo_name"
         android:textColor="?android:textColorPrimary"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/ivAvatar"
+        android:textSize="@dimen/text_size_repo_name"
+        app:layout_constraintStart_toEndOf="@+id/imgProfile"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvRepoDesc"
+        android:id="@+id/txtDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="@dimen/margin_repo"
+        android:layout_marginTop="@dimen/margin_repo"
         android:maxLines="3"
-        android:text="[Repo description...]"
+        android:text="@string/app_repo_description"
         android:textColor="?android:textColorPrimary"
-        android:textSize="12sp"
+        android:textSize="@dimen/text_size_language"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivAvatar"
-        app:layout_constraintTop_toBottomOf="@+id/tvRepoName" />
+        app:layout_constraintStart_toEndOf="@+id/imgProfile"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
     <ImageView
-        android:id="@+id/ivAvatar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:id="@+id/imgProfile"
+        android:layout_width="@dimen/layout_img"
+        android:layout_height="@dimen/layout_img"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ic_image_place_holder" />
+        tools:srcCompat="@drawable/ic_place_holder" />
 
     <TextView
-        android:id="@+id/tvRepoOwner"
+        android:id="@+id/txtOwner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="[Submitted 30 days ago by user]"
+        android:text="@string/repo_submitted"
         android:textColor="?android:textColorPrimary"
-        android:textSize="12sp"
+        android:textSize="@dimen/text_size_language"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tvNumberOfStars"
+        android:id="@+id/txtStars"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:text="[Stars: 18k]"
+        android:layout_marginBottom="@dimen/layout_marginBottom_star"
+        android:text="@string/repo_star"
         android:textColor="?android:textColorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/tvRepoOwner"
+        app:layout_constraintBottom_toTopOf="@+id/txtOwner"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tvNumberOfIssues"
+        android:id="@+id/txtFork"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="2dp"
-        android:text="[Issues: 18]"
+        android:layout_marginStart="@dimen/margin_repo"
+        android:layout_marginBottom="@dimen/layout_marginBottom_star"
+        android:text="@string/repo_fork"
         android:textColor="?android:textColorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/tvRepoOwner"
-        app:layout_constraintStart_toEndOf="@+id/tvNumberOfStars" />
+        app:layout_constraintBottom_toTopOf="@+id/txtOwner"
+        app:layout_constraintStart_toEndOf="@+id/txtStars" />
 
     <TextView
-        android:id="@+id/tvLang"
+        android:id="@+id/txtLanguage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="15dp"
-        android:text="Lang"
-        android:textColor="#039BE5"
-        android:textSize="15sp"
+        android:layout_marginEnd="@dimen/margin_repo"
+        android:layout_marginBottom="@dimen/layout_marginBottom"
+        android:text="@string/repo_language"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/text_size_language"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

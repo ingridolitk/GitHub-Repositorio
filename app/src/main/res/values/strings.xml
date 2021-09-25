@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">ApiGitRepo</string>
     <string name="app_repo_name">[Name]</string>
-    <string name="app_repo_description">[Descrição]</string></resources>
+    <string name="app_repo_description">[Descrição]</string>
+    <string name="repo_star">[Star]</string>
+    <string name="repo_fork">[Fork]</string>
+    <string name="repo_language">[Language]</string>
+    <string name="repo_submitted">[Enviado em ]</string>
+</resources>
