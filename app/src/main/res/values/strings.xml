@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ApiGitRepo</string>
+    <string name="app_repo_name">[Name]</string>
+    <string name="app_repo_description">[Descrição]</string></resources>
