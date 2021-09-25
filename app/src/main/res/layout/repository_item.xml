@@ -1,88 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/layout_height"
-    android:layout_margin="@dimen/layout_margin">
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5sp"
+    android:layout_marginTop="5sp"
+    android:layout_marginRight="5sp"
+    android:layout_marginBottom="5sp"
+    app:cardBackgroundColor="@color/white">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
 
-    <TextView
-        android:id="@+id/txtName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_repo"
-        android:layout_marginTop="@dimen/margin_repo"
-        android:text="@string/app_repo_name"
-        android:textColor="?android:textColorPrimary"
-        android:textSize="@dimen/text_size_repo_name"
-        app:layout_constraintStart_toEndOf="@+id/imgProfile"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_repo"
+            android:layout_marginTop="@dimen/margin_repo"
+            android:text="@string/app_repo_name"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/text_size_repo_name"
+            app:layout_constraintStart_toEndOf="@+id/imgProfile"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtDescription"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_repo"
-        android:layout_marginTop="@dimen/margin_repo"
-        android:maxLines="3"
-        android:text="@string/app_repo_description"
-        android:textColor="?android:textColorPrimary"
-        android:textSize="@dimen/text_size_language"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgProfile"
-        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_repo"
+            android:layout_marginTop="@dimen/margin_repo"
+            android:maxLines="3"
+            android:text="@string/app_repo_description"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/text_size_language"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgProfile"
+            app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
-    <ImageView
-        android:id="@+id/imgProfile"
-        android:layout_width="@dimen/layout_img"
-        android:layout_height="@dimen/layout_img"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ic_place_holder" />
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="@dimen/layout_img"
+            android:layout_height="@dimen/layout_img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_place_holder" />
 
-    <TextView
-        android:id="@+id/txtOwner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/repo_submitted"
-        android:textColor="?android:textColorPrimary"
-        android:textSize="@dimen/text_size_language"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/txtOwner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/repo_submitted"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/text_size_language"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/txtStars"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/layout_marginBottom_star"
-        android:text="@string/repo_star"
-        android:textColor="?android:textColorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/txtOwner"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/txtStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_marginBottom_star"
+            android:text="@string/repo_star"
+            android:textColor="?android:textColorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/txtOwner"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/txtFork"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_repo"
-        android:layout_marginBottom="@dimen/layout_marginBottom_star"
-        android:text="@string/repo_fork"
-        android:textColor="?android:textColorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/txtOwner"
-        app:layout_constraintStart_toEndOf="@+id/txtStars" />
+        <TextView
+            android:id="@+id/txtFork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_repo"
+            android:layout_marginBottom="@dimen/layout_marginBottom_star"
+            android:text="@string/repo_fork"
+            android:textColor="?android:textColorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/txtOwner"
+            app:layout_constraintStart_toEndOf="@+id/txtStars" />
 
-    <TextView
-        android:id="@+id/txtLanguage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_repo"
-        android:layout_marginBottom="@dimen/layout_marginBottom"
-        android:text="@string/repo_language"
-        android:textColor="@color/blue"
-        android:textSize="@dimen/text_size_language"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/txtLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_repo"
+            android:layout_marginBottom="@dimen/layout_marginBottom"
+            android:text="@string/repo_language"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_size_language"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
