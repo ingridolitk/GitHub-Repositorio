@@ -40,7 +40,8 @@ class GitAdapter: PagedListAdapter<Item, GitAdapter.GitViewHolder>(ITEM_COMPARAT
 
             repoOwnerName.text = "${data.owner.login}"
             repoName.text = data.name
-            if (data.description.isNotEmpty()) {
+            if (data.description != null && data.description.isNotEmpty()) {
+
                 repoDescription.text = data.description
             } else {
                 repoDescription.text = "Sem Descrição."
