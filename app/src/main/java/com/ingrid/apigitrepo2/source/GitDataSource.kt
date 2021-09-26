@@ -70,6 +70,7 @@ class GitDataSource : PageKeyedDataSource<Int, Item>() {
                     query = queryLanguage, sort = sort, order = order,
                     page = params.key, per_page = PAGE_SIZE
                 )
+
                 if (response.isSuccessful) {
                     val key = params.key + 1
 

@@ -6,15 +6,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="5sp"
-    android:layout_marginTop="5sp"
-    android:layout_marginRight="5sp"
-    android:layout_marginBottom="5sp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
     app:cardBackgroundColor="@color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_height="180dp">
 
         <TextView
             android:id="@+id/txtName"
@@ -60,23 +60,41 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/star"
+            app:layout_constraintBottom_toTopOf="@+id/txtOwner"
+            app:layout_constraintEnd_toStartOf="@+id/txtStars"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <TextView
             android:id="@+id/txtStars"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
             android:layout_marginBottom="@dimen/layout_marginBottom_star"
-            android:text="@string/repo_star"
+            android:text=""
             android:textColor="?android:textColorPrimary"
             app:layout_constraintBottom_toTopOf="@+id/txtOwner"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/issues"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/issues"
+            app:layout_constraintBottom_toTopOf="@+id/txtOwner"
+            app:layout_constraintEnd_toStartOf="@+id/txtFork" />
 
         <TextView
             android:id="@+id/txtFork"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_repo"
+            android:layout_marginStart="52dp"
             android:layout_marginBottom="@dimen/layout_marginBottom_star"
-            android:text="@string/repo_fork"
+            android:text=""
             android:textColor="?android:textColorPrimary"
             app:layout_constraintBottom_toTopOf="@+id/txtOwner"
             app:layout_constraintStart_toEndOf="@+id/txtStars" />

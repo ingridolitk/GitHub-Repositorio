@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.CircleCropTransformation
+import com.bumptech.glide.Glide
 import com.ingrid.apigitrepo2.R
 import com.ingrid.apigitrepo2.databinding.RepositoryItemBinding
 import com.ingrid.apigitrepo2.model.Item
@@ -37,7 +38,7 @@ class GitAdapter: PagedListAdapter<Item, GitAdapter.GitViewHolder>(ITEM_COMPARAT
 
         fun bind(data: Item) {
 
-            repoOwnerName.text = "[${data.owner.login}]"
+            repoOwnerName.text = "${data.owner.login}"
             repoName.text = data.name
             if (data.description.isNotEmpty()) {
                 repoDescription.text = data.description
@@ -48,20 +49,22 @@ class GitAdapter: PagedListAdapter<Item, GitAdapter.GitViewHolder>(ITEM_COMPARAT
             if (data.stargazers_count > 1000) {
                 var num = (data.stargazers_count.toDouble() / 1000)
                 var s = String.format("%.1f", num) + "k"
-                numberOfStars.text = "[Stars: $s]"
+                numberOfStars.text = " $s"
             } else {
-                numberOfStars.text = "[Stars: ${data.stargazers_count}]"
+                numberOfStars.text = " ${data.stargazers_count}"
             }
 
-            numberOfIssues.text = "[Forks: ${data.open_issues_count}]"
+            numberOfIssues.text = "${data.open_issues_count}"
 
             val url: String = data.owner.avatar_url
-            avatarImage.load(url) {
-                crossfade(true)
-                placeholder(R.drawable.ic_place_holder)
-                transformations(CircleCropTransformation())
+
+            avatarImage?.let {
+                Glide.with(avatarImage.context).load(url)
+                    .into(it)
             }
+
             lang.text = data.language
+
         }
     }
     companion object {
