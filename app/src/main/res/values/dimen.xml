@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="layout_height">150dp</dimen>
-    <dimen name="layout_width">150dp</dimen>
-    <dimen name="layout_margin">20dp</dimen>
-    <dimen name="margin_repo">5dp</dimen>
-    <dimen name="layout_marginBottom">15dp</dimen>
-    <dimen name="text_size_language">15dp</dimen>
-    <dimen name="text_size_repo_name">25sp</dimen>
-    <dimen name="text_size_layout_desc">12sp</dimen>
-    <dimen name="layout_marginBottom_star">2dp</dimen>
-    <dimen name="layout_img">100dp</dimen>
+
+    <dimen name="little">2dp</dimen>
+    <dimen name="xxlittle">5dp</dimen>
+    <dimen name="medium">15dp</dimen>
+    <dimen name="xmedium">20dp</dimen>
+    <dimen name="xxmedium">32dp</dimen>
+    <dimen name="xxxmedium">50dp</dimen>
+    <dimen name="large">100dp</dimen>
+    <dimen name="xlarge">150dp</dimen>
+    <dimen name="xxlarge">180dp</dimen>
+
+<!--text Size-->
+    <dimen name="txtlittle">12sp</dimen>
+    <dimen name="txt_medium">15sp</dimen>
+    <dimen name="txt_xmedium">20dp</dimen>
 </resources>

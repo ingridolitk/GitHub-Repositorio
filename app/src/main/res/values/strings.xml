@@ -5,5 +5,5 @@
     <string name="repo_star">[Star]</string>
     <string name="repo_fork">[Fork]</string>
     <string name="repo_language">[Language]</string>
-    <string name="repo_submitted">[Enviado em ]</string>
+    <string name="repo_submitted">[Enviado ]</string>
 </resources>

@@ -6,25 +6,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="5dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginRight="5dp"
-    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="@dimen/xxlittle"
+    android:layout_marginTop="@dimen/xxlittle"
+    android:layout_marginRight="@dimen/xxlittle"
+    android:layout_marginBottom="@dimen/xxlittle"
     app:cardBackgroundColor="@color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="180dp">
+        android:layout_height="@dimen/xxlarge">
 
         <TextView
             android:id="@+id/txtName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_repo"
-            android:layout_marginTop="@dimen/margin_repo"
+            android:layout_marginStart="@dimen/xmedium"
+            android:layout_marginTop="@dimen/medium"
             android:text="@string/app_repo_name"
             android:textColor="?android:textColorPrimary"
-            android:textSize="@dimen/text_size_repo_name"
+            android:textSize="@dimen/txt_xmedium"
             app:layout_constraintStart_toEndOf="@+id/imgProfile"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,20 +32,22 @@
             android:id="@+id/txtDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_repo"
-            android:layout_marginTop="@dimen/margin_repo"
+            android:layout_marginStart="@dimen/xmedium"
+            android:layout_marginTop="@dimen/medium"
             android:maxLines="3"
             android:text="@string/app_repo_description"
             android:textColor="?android:textColorPrimary"
-            android:textSize="@dimen/text_size_language"
+            android:textSize="@dimen/txt_medium"
+            app:layout_constraintBottom_toTopOf="@+id/txtLanguage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imgProfile"
             app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
         <ImageView
             android:id="@+id/imgProfile"
-            android:layout_width="@dimen/layout_img"
-            android:layout_height="@dimen/layout_img"
+            android:layout_width="@dimen/large"
+            android:layout_height="@dimen/large"
+            android:layout_marginTop="@dimen/medium"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@drawable/ic_place_holder" />
@@ -56,14 +58,15 @@
             android:layout_height="wrap_content"
             android:text="@string/repo_submitted"
             android:textColor="?android:textColorPrimary"
-            android:textSize="@dimen/text_size_language"
+            android:textSize="@dimen/medium"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/star"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/xmedium"
+            android:layout_height="@dimen/xmedium"
+            android:layout_marginBottom="@dimen/medium"
             android:src="@drawable/star"
             app:layout_constraintBottom_toTopOf="@+id/txtOwner"
             app:layout_constraintEnd_toStartOf="@+id/txtStars"
@@ -73,17 +76,17 @@
             android:id="@+id/txtStars"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginBottom="@dimen/layout_marginBottom_star"
-            android:text=""
+            android:layout_marginStart="@dimen/xmedium"
+            android:layout_marginBottom="@dimen/medium"
             android:textColor="?android:textColorPrimary"
             app:layout_constraintBottom_toTopOf="@+id/txtOwner"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/issues"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/xmedium"
+            android:layout_height="@dimen/medium"
+            android:layout_marginBottom="@dimen/medium"
             android:src="@drawable/issues"
             app:layout_constraintBottom_toTopOf="@+id/txtOwner"
             app:layout_constraintEnd_toStartOf="@+id/txtFork" />
@@ -92,9 +95,8 @@
             android:id="@+id/txtFork"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginBottom="@dimen/layout_marginBottom_star"
-            android:text=""
+            android:layout_marginStart="@dimen/xxxmedium"
+            android:layout_marginBottom="@dimen/medium"
             android:textColor="?android:textColorPrimary"
             app:layout_constraintBottom_toTopOf="@+id/txtOwner"
             app:layout_constraintStart_toEndOf="@+id/txtStars" />
@@ -103,11 +105,11 @@
             android:id="@+id/txtLanguage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin_repo"
-            android:layout_marginBottom="@dimen/layout_marginBottom"
+            android:layout_marginEnd="@dimen/xxlittle"
+            android:layout_marginBottom="@dimen/medium"
             android:text="@string/repo_language"
             android:textColor="@color/blue"
-            android:textSize="@dimen/text_size_language"
+            android:textSize="@dimen/txtlittle"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
