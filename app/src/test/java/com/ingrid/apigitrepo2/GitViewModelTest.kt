@@ -53,7 +53,7 @@ class UsersViewModelTest {
         val resultSuccess = MockRepository()
         viewModel = GitViewModel.observeForever(gitListObserver)
         //Act
-        viewModel.getMovies()
+        viewModel.getGitHub()
 
         // Assert
         verify(gitListObserver).onChanged(list)
