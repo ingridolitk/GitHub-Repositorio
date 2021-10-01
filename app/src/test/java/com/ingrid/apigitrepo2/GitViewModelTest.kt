@@ -33,7 +33,7 @@ class UsersViewModelTest {
     private lateinit var viewModel: GitAdapter.GitViewHolder
 
     @Test
-    fun `when viewModel getMovie result in success then sets movieListLiveData`() {
+    fun `when viewModel getGitHub result in success then sets repoListLiveData`() {
         //Arrange
 
         val list = listOf<Item>(
